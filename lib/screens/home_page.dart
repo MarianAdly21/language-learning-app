@@ -18,6 +18,9 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Category(
+            ontap: () {
+              
+            },
             text: 'Numbers',
             color: Color(0xffEF9235),
           ),
