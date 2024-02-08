@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/components/number_item.dart';
-import 'package:learning_app/models/number.dart';
+import 'package:learning_app/models/item.dart';
 import 'package:learning_app/screens/home_page.dart';
 
 class ColorPage extends StatelessWidget {
   const ColorPage({super.key});
-  final List<ItemModel> numbers = const [
+  final List<ItemModel> colorList = const [
     ItemModel(
         sound: 'sounds/color/black.wav',
         image: 'assets/images/color/color_black.png',
@@ -47,15 +47,6 @@ class ColorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // leading: IconButton(
-        //   icon: Icon(
-        //     Icons.arrow_back,
-        //     color: Colors.white,
-        //   ),
-        //   onPressed: () {
-
-        //   },
-        // ),
         title: Text(
           'Color',
           style: TextStyle(color: Colors.white),
@@ -63,9 +54,9 @@ class ColorPage extends StatelessWidget {
         backgroundColor: Color(0xff46322B),
       ),
       body: ListView.builder(
-        itemCount: numbers.length,
+        itemCount: colorList.length,
         itemBuilder: (context, index) {
-          return NumberItem(color: Color(0xff7c3fa1), number: numbers[index]);
+          return NumberItem(color: Color(0xff7c3fa1), number: colorList[index]);
         },
       ),
     );

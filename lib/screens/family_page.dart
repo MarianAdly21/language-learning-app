@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/components/number_item.dart';
-import 'package:learning_app/models/number.dart';
+import 'package:learning_app/models/item.dart';
 import 'package:learning_app/screens/home_page.dart';
 
 class FamilyPage extends StatelessWidget {
   const FamilyPage({super.key});
-  final List<ItemModel> numbers = const [
+  final List<ItemModel> familyList = const [
     ItemModel(
         sound: 'sounds/family_members/grand father.wav',
         image: 'assets/images/family/family_grandfather.png',
@@ -22,7 +22,7 @@ class FamilyPage extends StatelessWidget {
         jpName: 'Chichioya',
         enName: 'Father'),
     ItemModel(
-        sound: 'sounds/numbers/number_four_sound.mp3',
+        sound: 'sounds/members/number_four_sound.mp3',
         image: 'assets/images/family/family_mother.png',
         jpName: 'Hahaoya',
         enName: 'Mother'),
@@ -78,9 +78,9 @@ class FamilyPage extends StatelessWidget {
         backgroundColor: Color(0xff46322B),
       ),
       body: ListView.builder(
-        itemCount: numbers.length,
+        itemCount: familyList.length,
         itemBuilder: (context, index) {
-          return NumberItem(color: Color(0xff528031), number: numbers[index]);
+          return NumberItem(color: Color(0xff528031), number: familyList[index]);
         },
       ),
     );

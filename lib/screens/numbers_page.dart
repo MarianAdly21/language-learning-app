@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/components/number_item.dart';
-import 'package:learning_app/models/number.dart';
+import 'package:learning_app/models/item.dart';
 import 'package:learning_app/screens/home_page.dart';
 
 class NumbersPage extends StatelessWidget {
@@ -62,15 +62,6 @@ class NumbersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // leading: IconButton(
-        //   icon: Icon(
-        //     Icons.arrow_back,
-        //     color: Colors.white,
-        //   ),
-        //   onPressed: () {
-
-        //   },
-        // ),
         title: Text(
           'Numbers',
           style: TextStyle(color: Colors.white),
