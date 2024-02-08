@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_app/components/category_item.dart';
+import 'package:learning_app/screens/color_page.dart';
 import 'package:learning_app/screens/family_page.dart';
 import 'package:learning_app/screens/numbers_page.dart';
 
@@ -38,6 +39,11 @@ class HomePage extends StatelessWidget {
             color: Color(0xff528031),
           ),
           Category(
+            ontap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return ColorPage();
+              }));
+            },
             text: 'Colors',
             color: Color(0xff7c3fa1),
           ),
